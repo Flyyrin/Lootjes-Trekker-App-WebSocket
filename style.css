@@ -1,0 +1,9 @@
+.custom-btn {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .custom-btn {
+    width: auto;
+  }
+}
