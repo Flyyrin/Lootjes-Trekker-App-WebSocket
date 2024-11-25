@@ -1,7 +1,8 @@
+const server = "http://192.168.2.19:5000"; 
 $(document).ready(function () {
   $("#controls").hide();
   $("#result").hide();
-  const socket = io.connect("http://localhost:5000");
+  const socket = io.connect(server);
 
   function addMessage(message) {
     $("#messages").append(
@@ -55,8 +56,9 @@ $(document).ready(function () {
   });
 
   socket.on("assignment", function (data) {
+    const formattedGifts = data.gifts.replace(/\n/g, "<br>");
     $("#result-name").text(data.name);
-    $("#result-gifts").text(data.gifts);
+    $("#result-gifts").html(formattedGifts);
     $("#controls").hide();
     $("#messages").hide();
     $("#result").show();
@@ -67,5 +69,10 @@ $(document).ready(function () {
     $("#controls").hide();
     $("#result").hide();
     $("#form").show();
+  });
+
+  socket.on("connect_error", function () {
+    addError("Er is iets mis gegaan, probeer het later nog eens.");
+    socket.disconnect();
   });
 });

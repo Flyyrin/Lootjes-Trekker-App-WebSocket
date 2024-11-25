@@ -13,7 +13,7 @@
     <link href="/style.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="container mt-3">
+    <div class="container mt-3 col-12 col-md-8 col-lg-6">
       <div class="text-center text-md-start">
         <h1 class="mb-0">Lootjes Trekker</h1>
         <p class="text-muted"><small>door Rafael Lemmen</small></p>
@@ -39,16 +39,28 @@
             rows="5"
           ></textarea>
         </div>
-        <button type="button" class="btn btn-primary custom-btn" id="join-btn">
+        <button
+          type="button"
+          class="btn btn-primary col-12 col-md-3"
+          id="join-btn"
+        >
           Meedoen
         </button>
       </div>
       <div id="controls">
-        <div class="text-center text-md-start mb-3">
-          <button type="button" class="btn btn-primary" id="shuffle-btn">
+        <div class="d-flex gap-2 text-center text-md-start mb-3">
+          <button
+            type="button"
+            class="btn btn-primary col-6 col-md-3"
+            id="shuffle-btn"
+          >
             Start
           </button>
-          <button type="button" class="btn btn-secondary" id="clear-btn">
+          <button
+            type="button"
+            class="btn btn-secondary col-6 col-md-3"
+            id="clear-btn"
+          >
             Opnieuw
           </button>
         </div>
@@ -59,7 +71,7 @@
           <div class="card-body">
             <h5 class="fw-bold mb-0">Naam</h5>
             <p class="card-text" id="result-name"></p>
-            <h5 class="fw-bold mb-0">cadeauvoorkeur(en)</h5>
+            <h5 class="fw-bold mb-0">Cadeauvoorkeur(en)</h5>
             <p class="card-text" id="result-gifts"></p>
           </div>
         </div>
