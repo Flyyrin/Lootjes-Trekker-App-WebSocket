@@ -1,4 +1,4 @@
-# Python Websocket Lottery Draw
+# JavaScript Websocket Lottery Draw
 
 ## :brain: Project Description
 An app allowing users to enter there prefered gifts, and then the lots will be randomly assiged to each other.
